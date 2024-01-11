@@ -1,0 +1,70 @@
+.app {
+    display: flex; 
+    flex-direction: column; 
+    height: 90vh;
+    user-select: none;
+  }
+  
+  .layout {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 70vw;
+    margin: 0 auto;
+  }
+  
+  .cartContent {
+    display: flex;
+    justify-content: space-between;  
+  }
+  
+  .myHeader {
+    width: 70vw;
+    height: 25vh;
+    background-color: rgb(244, 235, 186);
+  }
+  
+  .cart {
+    width: 20vw;
+    border: 1px solid;
+    text-align: center;
+    overflow-y: scroll;
+    background-color: rgb(232, 235, 235);
+  }
+  
+  .content {
+    width: 80vw;
+    padding: 0 50px;
+    background-color: rgb(232, 232, 232);
+  }
+  
+  .itemList {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .item {
+    text-align: center;
+    width: 110px;
+    padding: 40px;
+    margin: 10px auto;
+    border: 1px solid;
+    background-color: rgb(255, 255, 255);
+    border-color: aliceblue;
+  }
+
+  .amountSpan {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 10px 0 10px;
+  }
+
+  button {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 21px;
+    font-weight: bold;
+    cursor: pointer;
+  }
