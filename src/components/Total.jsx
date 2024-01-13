@@ -1,20 +1,21 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { ItemsContext } from "../Layout";
 
 export default function Total() {
 
+  const { cartItems } = useContext(ItemsContext);
   const [total, setTotal] = useState(0);
-  const { cartItems, setCartItems } = useContext(ItemsContext);
 
+  useEffect(() => {
+    function calculateTotal() {
+      let sum = Object.values(cartItems).reduce(
+        (acc, item) => acc + item.price * item.amount, 0).toFixed(2);
+      setTotal(sum)
+    }
+    calculateTotal();
+  }, [cartItems])
 
-  function getTotal() {
-    let correntCart = {...cartItems };
-    
-  }
-
-  getTotal()
-
-  return <div>Total
-
+  return <div>
+    Total: {total}
   </div>;
 }
