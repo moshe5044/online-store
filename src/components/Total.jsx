@@ -15,7 +15,7 @@ export default function Total() {
     calculateTotal();
   }, [cartItems])
 
-  return <div>
+  return <div className="total">
     Total: {total}
   </div>;
 }

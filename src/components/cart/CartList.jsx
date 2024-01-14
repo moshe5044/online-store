@@ -4,10 +4,15 @@ import { ItemsContext } from "../../Layout";
 
 export default function CartList() {
 
-  const { cartItems } = useContext(ItemsContext);
+  const { cartItems, setCartItems } = useContext(ItemsContext);
+
+  function handleDeleteAll() {
+    setCartItems({})
+  }
 
   return (
     <div>
+      <button className="deleteAllButton" onClick={handleDeleteAll}>Delete all</button>
       {Object.values(cartItems).map((item) => (
         <CartItem key={item.id} item={item} />
       ))}
