@@ -26,7 +26,7 @@ export default function CartItem({ item }) {
   }
  
   return (
-    <div>
+    <div className="cartItem">
       <h3>{name}</h3>
       <h2>{emoji}</h2>
       <h4>{price}</h4>
